@@ -72,3 +72,28 @@
   transform: translateY(-2px);
   box-shadow: 0 5px 12px rgba(33, 150, 243, 0.3);
 }
+
+/* Class để làm nổi bật câu hỏi */
+.highlighted-question {
+  background: linear-gradient(to right, #f0f7ff, white, #f0f7ff);
+  border-left: 4px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.highlighted-question:hover {
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Hiệu ứng đặc biệt cho câu hỏi quan trọng */
+.important-question {
+  background: linear-gradient(to right, #e3f2fd, #bbdefb, #e3f2fd);
+  border-left: 4px solid var(--accent-color);
+  font-weight: 600;
+}

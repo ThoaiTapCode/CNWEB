@@ -146,6 +146,11 @@
   font-weight: 500;
   color: var(--text-color);
   margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: linear-gradient(to right, #f0f7ff, white, #f0f7ff);
+  border-left: 4px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.15);
 }
 
 .question-media {

@@ -62,12 +62,37 @@
 
 .question-content {
   padding: 1.5rem;
+  background: linear-gradient(to right, #f0f7ff, white, #f0f7ff);
+  border-left: 4px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.15);
+  margin-bottom: 1rem;
+}
+
+.question-content:hover {
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.25);
+  transition: all 0.3s ease;
+}
+
+/* Thêm hiệu ứng pulsating để làm nổi bật câu hỏi hiện tại */
+@keyframes questionHighlight {
+  0% { box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(33, 150, 243, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(33, 150, 243, 0); }
+}
+
+.current-question .question-content {
+  animation: questionHighlight 2s infinite;
 }
 
 .question-text {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  font-weight: 500;
+  color: var(--text-color);
+  position: relative;
+  padding-left: 10px;
 }
 
 .media-container {
