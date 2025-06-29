@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../CSS/ExamList.css';
-import { FaPlus, FaSearch, FaEye, FaPencilAlt, FaTrashAlt, FaSpinner, FaHome } from 'react-icons/fa';
+import { FaSearch, FaEye, FaPencilAlt, FaTrashAlt, FaSpinner, FaHome } from 'react-icons/fa';
 
 const ExamList = () => {
     const [exams, setExams] = useState([]);
@@ -48,10 +48,6 @@ const ExamList = () => {
     };    const handleViewDetails = (examId) => {
         navigate(`/exams/details/${examId}`);
     };
-    
-    const handleCreateExam = () => {
-        navigate('/exams/create');
-    };
 
     // Filter exams based on search term
     const filteredExams = exams.filter(exam => 
@@ -96,9 +92,6 @@ const ExamList = () => {
                 <h2 className="exam-list-title">Danh sách đề thi của tôi</h2>                <div className="header-buttons">
                     <button className="back-home-button" onClick={() => navigate('/teacher')}>
                         <FaHome /> Quay về trang chủ
-                    </button>
-                    <button className="create-exam-button" onClick={handleCreateExam}>
-                        <FaPlus /> Tạo đề thi mới
                     </button>
                 </div>
             </div>
